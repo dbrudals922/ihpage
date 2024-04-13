@@ -1,8 +1,9 @@
 {
   "name": "ih-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": ".0.0",
   "type": "module",
+  "main": "main.js",
   "scripts": {
     "start": "vite --host --port 8081",
     "build": "vite build"
