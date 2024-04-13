@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/photo/';
+const API_URL = 'https://port-0-ihbackend-85phb42bluxo83i2.sel5.cloudtype.app/api/photo/';
 
 class PhotoService {
 
