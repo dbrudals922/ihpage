@@ -41,7 +41,7 @@
               중고
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" v-if="currentUser">
             <a class="text-dark nav-link" href="#page6" @click="Please()">
               문의
             </a>
