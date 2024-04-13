@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_URL = 'https://port-0-ihbackend-85phb42bluxo83i2.sel5.cloudtype.app/api/test/';
+const API_URL = 'https://port-0-backend-85phb42bluxo83i2.sel5.cloudtype.app/api/test/';
 
 class UserService {
   getPublicContent() {

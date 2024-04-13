@@ -33,7 +33,7 @@ export default defineConfig({
       server: {
         proxy: {
           '/api': {
-            target: 'https://port-0-ihbackend-85phb42bluxo83i2.sel5.cloudtype.app',
+            target: 'https://port-0-backend-85phb42bluxo83i2.sel5.cloudtype.app',
             rewrite: (path) => path.replace(/^\/api/, ''),
             ws: true,
             changeOrigin: true,
@@ -45,7 +45,7 @@ export default defineConfig({
     server: {
       proxy: {
         '/api': {
-          target: 'https://port-0-ihbackend-85phb42bluxo83i2.sel5.cloudtype.app/',
+          target: 'https://port-0-backend-85phb42bluxo83i2.sel5.cloudtype.app/',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ''),
           secure: false,
