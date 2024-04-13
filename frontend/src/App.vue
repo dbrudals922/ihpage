@@ -85,6 +85,9 @@ import axios from 'axios';
 import { usePhotoStore } from "./store/photo.js";
 import PhotoService from "./services/photo.service.js";
 
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.css'
+
 
 export default {
   name: 'app',
