@@ -2,7 +2,8 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./index.js";
 import store from "./store";
-
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.css'
 import { FontAwesomeIcon } from './plugins/font-awesome'
 import axios from 'axios'
 
@@ -34,7 +35,6 @@ const options = {
 
 
 const pinia = createPinia()
-
 
 createApp(App)
   .use(router)
