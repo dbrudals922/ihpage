@@ -143,7 +143,7 @@
       <h2>추후 "중고거래" 탭이 오픈될 예정입니다.</h2>
     </div>
 
-    <div class="section" v-if="currentUser">
+    <div class="section">
       <Report />
     </div>
 
