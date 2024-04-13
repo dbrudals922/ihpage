@@ -82,6 +82,9 @@ import VueFullPage from 'vue-fullpage.js'
 import AuthService from './services/auth.service.js'
 import axios from 'axios';
 
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.css'
+
 import { usePhotoStore } from "./store/photo.js";
 import PhotoService from "./services/photo.service.js";
 
