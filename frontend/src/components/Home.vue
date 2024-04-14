@@ -798,6 +798,7 @@ export default {
         () => {
           this.loading = true;
           this.$router.push("/");
+          this.$router.go();
           history.go(0);
 
         },
