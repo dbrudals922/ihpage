@@ -19,7 +19,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "ih_images_reply")
+@Table(name = "images_reply")
 @Getter
 @Setter
 public class PhotoReply {

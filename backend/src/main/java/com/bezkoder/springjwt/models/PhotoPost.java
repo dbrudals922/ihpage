@@ -24,7 +24,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "ih_images_post")
+@Table(name = "images_post")
 @Getter
 @Setter
 public class PhotoPost {

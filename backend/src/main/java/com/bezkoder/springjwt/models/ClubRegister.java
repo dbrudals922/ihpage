@@ -12,7 +12,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "ih_clubRegister", uniqueConstraints = { @UniqueConstraint(columnNames = { "club", "user" }) })
+@Table(name = "clubRegister", uniqueConstraints = { @UniqueConstraint(columnNames = { "club", "user" }) })
 @Getter
 @Setter
 public class ClubRegister {

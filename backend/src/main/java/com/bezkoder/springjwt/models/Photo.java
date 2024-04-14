@@ -15,7 +15,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "ih_images", uniqueConstraints = { @UniqueConstraint(columnNames = { "post_id", "number" }) })
+@Table(name = "images", uniqueConstraints = { @UniqueConstraint(columnNames = { "post_id", "number" }) })
 @Getter
 @Setter
 public class Photo {

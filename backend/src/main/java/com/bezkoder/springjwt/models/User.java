@@ -44,7 +44,7 @@ id
  */
 
 @Entity
-@Table(name = "ih_users", uniqueConstraints = { @UniqueConstraint(columnNames = { "username", "email" }),
+@Table(name = "users", uniqueConstraints = { @UniqueConstraint(columnNames = { "username", "email" }),
 		@UniqueConstraint(columnNames = { "schoolCode", "s_grade", "s_class", "s_number" }) })
 @Data
 

@@ -13,7 +13,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "ih_clubPost")
+@Table(name = "clubPost")
 @Getter
 @Setter
 public class ClubPost {
