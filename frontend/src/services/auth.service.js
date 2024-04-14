@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'https://port-0-backend-85phb42bluxo83i2.sel5.cloudtype.app//api/auth/';
-const API_URL3 = 'https://port-0-backend-85phb42bluxo83i2.sel5.cloudtype.app//api/info/';
+const API_URL = 'https://port-0-backend-85phb42bluxo83i2.sel5.cloudtype.app/api/auth/';
+const API_URL3 = 'https://port-0-backend-85phb42bluxo83i2.sel5.cloudtype.app/api/info/';
 
 class AuthService {
   login(user) {
