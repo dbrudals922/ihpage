@@ -778,7 +778,8 @@ export default {
           this.loading = false;
 
           alert("회원가입에 성공하셨습니다!")
-          this.$router.go();
+          history.go(0);
+          
         },
         (error) => {
           this.message =
@@ -797,6 +798,8 @@ export default {
         () => {
           this.loading = true;
           this.$router.push("/");
+          history.go(0);
+
         },
         (error) => {
           this.loading = false;
