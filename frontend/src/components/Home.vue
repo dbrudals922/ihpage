@@ -16,9 +16,9 @@
       </div>
       <div class="slide">
         <Lunch />
-        <div class="d-flex justify-content-center">
+        <!-- <div class="d-flex justify-content-center">
           <span class="aaa mt-3">현재 데이터베이스 문제로 인하여<br>급식이 제공되지 않을 수 있습니다~^^</span>
-        </div>
+        </div> -->
       </div>
     </div>
 
