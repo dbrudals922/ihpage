@@ -797,8 +797,8 @@ export default {
       this.$store.dispatch("auth/login", user).then(
         () => {
           this.loading = true;
-          this.$router.push("/");
-          this.$router.go();
+          // this.$router.push("/");
+          // this.$router.go();
           history.go(0);
 
         },
