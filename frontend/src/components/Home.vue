@@ -797,7 +797,6 @@ export default {
         () => {
           this.loading = true;
           this.$router.push("/");
-          this.$router.go();
         },
         (error) => {
           this.loading = false;
@@ -828,7 +827,7 @@ export default {
     },
     logOut() {
       this.$store.dispatch('auth/logout');
-      this.$router.push('/login');
+      this.$router.go('/login');
     },
     onModalOpened() {
       console.log("열였당")
