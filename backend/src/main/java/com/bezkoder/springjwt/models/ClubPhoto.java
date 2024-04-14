@@ -34,7 +34,7 @@ public class ClubPhoto {
 
 	@NotNull
 	@ManyToOne()
-	@JoinColumn(name = "post_id", referencedColumnName = "id")
+	@JoinColumn(name = "postId", referencedColumnName = "id")
 	private ClubPost clubPost;
 
 	public ClubPhoto() {

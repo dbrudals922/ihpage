@@ -42,7 +42,7 @@ public class PhotoPost {
 	private String text;
 
 	@CreationTimestamp
-	@Column(name = "uploaded_on")
+	@Column(name = "uploadedOn")
 	private LocalDateTime uploadedOn;
 
 	@JsonIgnore

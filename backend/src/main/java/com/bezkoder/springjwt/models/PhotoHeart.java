@@ -35,7 +35,7 @@ public class PhotoHeart {
 
 	@NotNull
 	@ManyToOne()
-	@JoinColumn(name = "post_id")
+	@JoinColumn(name = "postId")
 	private PhotoPost photoPost;
 
 	@CreationTimestamp
