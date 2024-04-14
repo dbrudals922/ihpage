@@ -273,6 +273,7 @@ export default {
 
         // 업로드 화면 표시.
         uploadImages.value = true;
+        fullpage_api.setAllowScrolling(false);
         context.emit("changeUploadImages", true);
         previewImages.value = [];
 
@@ -335,6 +336,7 @@ export default {
     const cancelPost = () => {
       context.emit("changeUploadImages", false);
       uploadImages.value = false;
+      fullpage_api.setAllowScrolling(true);
       text.value = "";
       images = [];
 
@@ -386,6 +388,7 @@ export default {
 
       text.value = "";
       uploadImages.value = false;
+      fullpage_api.setAllowScrolling(true);
       context.emit("changeUploadImages", false);
 
       document.getElementById("Submit").disabled = false;
