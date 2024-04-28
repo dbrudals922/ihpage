@@ -19,7 +19,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "images_heart", uniqueConstraints = { @UniqueConstraint(columnNames = { "post_id", "user" }) })
+@Table(name = "ih_images_heart", uniqueConstraints = { @UniqueConstraint(columnNames = { "post_id", "user" }) })
 @Getter
 @Setter
 public class PhotoHeart {
@@ -35,7 +35,7 @@ public class PhotoHeart {
 
 	@NotNull
 	@ManyToOne()
-	@JoinColumn(name = "postId")
+	@JoinColumn(name = "post_id")
 	private PhotoPost photoPost;
 
 	@CreationTimestamp

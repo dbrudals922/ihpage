@@ -44,8 +44,7 @@ id
  */
 
 @Entity
-@Table(name = "users", uniqueConstraints = { @UniqueConstraint(columnNames = { "username", "email" }),
-		@UniqueConstraint(columnNames = { "schoolCode", "s_grade", "s_class", "s_number" }) })
+@Table(name = "ih_users", uniqueConstraints = { @UniqueConstraint(columnNames = { "username", "email" }) })
 @Data
 
 public class User {
@@ -54,13 +53,13 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user")
 	private Long id;
-
+	
 	@NotBlank
 	private String locaCode;
-
+	
 	@NotBlank
 	private String schoolCode;
-
+	
 	@NotNull
 	@Size(max = 20)
 	private String username;
@@ -81,33 +80,33 @@ public class User {
 	@NotBlank
 	@Size(max = 2)
 	private String s_class;
-
+	
 	@NotBlank
 	@Size(max = 2)
 	private String s_number;
 
 	@JsonIgnore
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "userId"), inverseJoinColumns = @JoinColumn(name = "roleId"))
+	@JoinTable(name = "ih_user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private Set<PhotoPost> imagePosts = new HashSet<>();
-
+	
 	@JsonIgnore
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private Set<PhotoReply> photoReplies = new HashSet<>();
-
+	
 	@JsonIgnore
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private Set<PhotoHeart> photoHearts = new HashSet<>();
+	
 
 	public User() {
 	}
 
-	public User(String locaCode, String code, String username, String email, String password, String grade, String ban,
-			String s_number) {
+	public User(String locaCode, String code, String username, String email, String password, String grade, String ban, String s_number) {
 		this.locaCode = locaCode;
 		this.schoolCode = code;
 		this.username = username;

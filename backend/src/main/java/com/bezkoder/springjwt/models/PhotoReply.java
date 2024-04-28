@@ -19,7 +19,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "images_reply")
+@Table(name = "ih_images_reply")
 @Getter
 @Setter
 public class PhotoReply {
@@ -43,7 +43,7 @@ public class PhotoReply {
 
 	@NotNull
 	@ManyToOne()
-	@JoinColumn(name = "postId")
+	@JoinColumn(name = "post_id")
 	private PhotoPost photoPost;
 
 	public PhotoReply() {

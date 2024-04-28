@@ -15,7 +15,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "ClubImages", uniqueConstraints = { @UniqueConstraint(columnNames = { "post_id", "number" }) })
+@Table(name = "ih_ClubImages", uniqueConstraints = { @UniqueConstraint(columnNames = { "post_id", "number" }) })
 @Getter
 @Setter
 public class ClubPhoto {
@@ -34,7 +34,7 @@ public class ClubPhoto {
 
 	@NotNull
 	@ManyToOne()
-	@JoinColumn(name = "postId", referencedColumnName = "id")
+	@JoinColumn(name = "post_id", referencedColumnName = "id")
 	private ClubPost clubPost;
 
 	public ClubPhoto() {

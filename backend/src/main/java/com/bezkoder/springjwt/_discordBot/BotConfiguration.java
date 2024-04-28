@@ -25,7 +25,8 @@ public class BotConfiguration {
 //	public <T extends Event> GatewayDiscordClient gatewayDiscordClient(List<_EventListener<T>> eventListeners) {
 //		GatewayDiscordClient client = null;
 //
-//		try {//			client = DiscordClientBuilder.create(token).build().login().block();
+//		try {
+//			client = DiscordClientBuilder.create(token).build().login().block();
 //
 //			for (_EventListener<T> listener : eventListeners) {
 //				client.on(listener.getEventType()).flatMap(listener::execute).onErrorResume(listener::handleError)

@@ -24,7 +24,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "images_post")
+@Table(name = "ih_images_post")
 @Getter
 @Setter
 public class PhotoPost {
@@ -42,7 +42,7 @@ public class PhotoPost {
 	private String text;
 
 	@CreationTimestamp
-	@Column(name = "uploadedOn")
+	@Column(name = "uploaded_on")
 	private LocalDateTime uploadedOn;
 
 	@JsonIgnore
