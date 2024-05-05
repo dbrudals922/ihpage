@@ -73,15 +73,12 @@ public class User {
 	@Size(max = 120)
 	private String password;
 
-	@NotBlank
 	@Size(max = 1)
 	private String s_grade;
 
-	@NotBlank
 	@Size(max = 2)
 	private String s_class;
 	
-	@NotBlank
 	@Size(max = 2)
 	private String s_number;
 

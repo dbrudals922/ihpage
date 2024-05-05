@@ -102,7 +102,7 @@
     </div>
 
 
-    <input id="fileUpload" class="form-control" type="file" accept="image/*" @input="pickFile"
+    <input id="fileUpload" class="form-control" type="file" accept="image/jpg, image/jpeg, image/png, image/heic" @input="pickFile"
       multiple hidden>
   </div>
 

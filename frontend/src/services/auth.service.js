@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'https://port-0-backend-85phb42bluxo83i2.sel5.cloudtype.app/api/auth/';
-const API_URL3 = 'https://port-0-backend-85phb42bluxo83i2.sel5.cloudtype.app/api/info/';
+const API_URL = 'http://localhost:8080/api/auth/';
+const API_URL3 = 'http://localhost:8080/api/info/';
 
 class AuthService {
   login(user) {
@@ -24,6 +24,7 @@ class AuthService {
   }
 
   register(user) {
+    console.log(user);
     return axios.post(API_URL + 'signup', {
       schoolName: user.schoolName,
       username: user.username,

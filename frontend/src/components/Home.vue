@@ -717,12 +717,12 @@ export default {
       this.schoolName = document.getElementById("schoolSelect").value;
       console.log(this.schoolName);
     },
-    roleRegister(num) { // 'student' or 'teacher'
+    roleRegister(num) { // 'student' - 0 or 'teacher' - 1
       const number = document.getElementById("s_number");
       const numberBox = document.getElementById("numberBox");
       const teacherMessage = document.getElementById("teacherMessage");
       if (num) {
-        number.value = 0
+        number.value = 1;
         numberBox.style.display = "none";
 
         teacherMessage.style.display = "block";
@@ -765,10 +765,10 @@ export default {
       this.searchTerm = e.target.value;
     },
     handleRegister(user) {
-      console.log("registed");
       this.message = "";
       this.successful = false;
       this.loading = true;
+      console.log("registed");
 
       this.$store.dispatch("auth/register", user).then(
         (data) => {
@@ -779,7 +779,7 @@ export default {
 
           alert("회원가입에 성공하셨습니다!")
           history.go(0);
-          
+
         },
         (error) => {
           this.message =
