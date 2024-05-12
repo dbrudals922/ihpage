@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://3.38.125.78:8080/api/club/';
+const API_URL = 'http://52.78.94.72:8080/api/club/';
 
 class ClubService {
     async uploadClubPost(formData) {
