@@ -95,7 +95,7 @@ public class AuthController {
 
 		Integer role = signUpRequest.getRole();
 		Set<Role> roles = new HashSet<>();
-
+		
 		if (role == null) {
 			Role userRole = roleRepository.findByName(ERole.ROLE_STUDENT)
 					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));

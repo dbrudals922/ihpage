@@ -715,7 +715,7 @@ export default {
   methods: {
     schoolNameRegister() {
       this.schoolName = document.getElementById("schoolSelect").value;
-      console.log(this.schoolName);
+      // console.log(this.schoolName);
     },
     roleRegister(num) { // 'student' - 0 or 'teacher' - 1
       const number = document.getElementById("s_number");
@@ -732,7 +732,7 @@ export default {
         numberBox.style.display = "block";
         teacherMessage.style.display = "none"
       }
-      console.log(num);
+      // console.log(num);
       this.role = num;
 
     },
@@ -753,8 +753,8 @@ export default {
       )
     },
     getClassGrade() {
-      console.log(document.getElementById("s_grade").value);
-      console.log(document.getElementById("s_class").value);
+      // console.log(document.getElementById("s_grade").value);
+      // console.log(document.getElementById("s_class").value);
     },
     getImageData(imageData) {
       this.imageData = imageData;
@@ -772,7 +772,7 @@ export default {
 
       this.$store.dispatch("auth/register", user).then(
         (data) => {
-          console.log(data);
+          // console.log(data);
           this.message = data.message;
           this.successful = true;
           this.loading = false;
@@ -834,7 +834,7 @@ export default {
       this.$router.go('/login');
     },
     onModalOpened() {
-      console.log("열였당")
+      // console.log("열였당")
     },
     setSplideIndex() {
 

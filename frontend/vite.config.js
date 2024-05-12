@@ -17,37 +17,41 @@ const licenseContent = `/*!
 export default defineConfig({
   plugins: [vue()],
   build: {
-    lib: {
-      entry: resolve(__dirname, 'src/index.js'),
-      name: 'vue-fullpage',
-      fileName: 'vue-fullpage'
-    },
-    rollupOptions: {
-      external: ['vue'],
-      output: {
-        globals: {
-          vue: 'Vue',
-        },
-        banner: licenseContent
-      },
-      server: {
-        proxy: {
-          '/api': {
-            target: 'https://localhost:8080',
-            rewrite: (path) => path.replace(/^\/api/, ''),
-            ws: true,
-            changeOrigin: true,
-            secure: false
-          }
-        }
-      }
-    },
+    // lib: {
+    //   entry: resolve(__dirname, 'src/index.js'),
+    //   name: 'vue-fullpage',
+    //   fileName: 'vue-fullpage'
+    // },
+    emptyOutDir: "../backend/src/main/resources/static",
+    // rollupOptions: {
+    //   external: ['vue'],
+    //   // output: {
+    //   //   globals: {
+    //   //     vue: 'Vue',
+    //   //   },
+    //   //   banner: licenseContent
+    //   // },
+    //   input: {
+    //     main: './index.html',
+    //   },
+    //   server: {
+    //     proxy: {
+    //       '/api': {
+    //         target: 'https://localhost:80',
+    //         // rewrite: (path) => path.replace(/^\/api/, ''),
+    //         ws: true,
+    //         changeOrigin: true,
+    //         secure: false
+    //       }
+    //     }
+    //   }
+    // },
     server: {
       proxy: {
         '/api': {
-          target: 'https://localhost:8080',
+          target: 'https://localhost:80',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ''),
+          // rewrite: (path) => path.replace(/^\/api/, ''),
           secure: false,
           ws: true
         }

@@ -6,7 +6,9 @@
   "main": "main.js",
   "scripts": {
     "start": "vite --host --port 8081",
-    "build": "vite build"
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev": "vite"
   },
   "dependencies": {
     "@egjs/flicking-plugins": "^4.7.1",
@@ -34,7 +36,7 @@
     "swiper": "^10.0.4",
     "vee-validate": "^4.9.6",
     "vue": "^3.2.47",
-    "vue-fullpage.js": "^0.2.13",
+    "vue-fullpage.js": "^0.2.17",
     "vue-media-upload": "^2.1.2",
     "vue-router": "^4.2.2",
     "vue-toastification": "^2.0.0-rc.5",
@@ -47,7 +49,7 @@
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
     "postcss-nesting": "^12.0.3",
-    "vite": "^4.3.9"
+    "vite": "^4.5.3"
   },
   "license": "GPL-3.0"
 }
