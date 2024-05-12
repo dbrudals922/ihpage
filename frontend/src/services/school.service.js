@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL3 = 'http://localhost:8080/api/info/';
+const API_URL3 = 'http://3.38.125.78:8080/api/info/';
 
 class AuthService {
   getLunchList(userName) {
