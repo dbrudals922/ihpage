@@ -22,7 +22,7 @@ export default defineConfig({
     //   name: 'vue-fullpage',
     //   fileName: 'vue-fullpage'
     // },
-    emptyOutDir: "../backend/src/main/resources/static",
+    outDir: "../backend/src/main/resources/static",
     // rollupOptions: {
     //   external: ['vue'],
     //   // output: {
