@@ -2,9 +2,10 @@
   <full-page :options="this.options" id="fullpage" ref="fullpage">
 
     <div class="section">
-      <div class="text-center">
+      <img src= "../assets/page1.jpg"/>
+      <!-- <div class="text-center">
         <h1>home</h1>
-      </div>
+      </div> -->
     </div>
 
     <div class="section" v-if="currentUser">
