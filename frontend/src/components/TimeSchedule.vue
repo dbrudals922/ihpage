@@ -170,7 +170,7 @@ table tr:nth-of-type(even) {
     padding: 8px 6px 8px 6px;
     height: 12px !important;
     width: 11%;
-
+    font-size: 70%;
   }
 
   thead {

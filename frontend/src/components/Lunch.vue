@@ -174,7 +174,6 @@ td:first-child {
     padding: 6px;
     height: 12px !important;
     width: 11%;
-
   }
 
   thead {
