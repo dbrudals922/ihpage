@@ -3,9 +3,9 @@
 
     <div class="section">
       <img src= "../assets/page1.jpg"/>
-      <!-- <div class="text-center">
-        <h1>home</h1>
-      </div> -->
+      <div class="text-center">
+        <h5>참고! 모바일 로그인 시 버튼이 돌아가며 아무 일도 일어나지 않을 때 우측 상단 x를 누르시면 사이트 이용 가능합니다.</h5>
+      </div>
     </div>
 
     <div class="section" v-if="currentUser">
