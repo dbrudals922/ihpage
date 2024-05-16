@@ -738,18 +738,18 @@ export default {
 
     },
     getSelect() {
-      console.log(event.target.value);
+      // console.log(event.target.value);
       this.loca = event.target.value;
     },
     getschoolName() {
-      console.log(this.loca);
+      // console.log(this.loca);
       console.log(document.getElementById("schoolNameInput").value);
 
       AuthService.getSchoolInfo(this.loca, document.getElementById("schoolNameInput").value).then(
         (res) => {
           this.schoolNameList = res.data;
 
-          console.log(this.schoolNameList);
+          // console.log(this.schoolNameList);
         }
       )
     },
@@ -818,7 +818,7 @@ export default {
       AuthService.please().then(
         (response) => {
           this.content = response.data;
-          console.log(this.content);
+          // console.log(this.content);
         },
         (error) => {
           this.content =
