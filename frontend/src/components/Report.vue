@@ -36,7 +36,8 @@ export default {
             request.setRequestHeader('Content-type', 'application/json');
 
             var myEmbed = {
-                title: currentUser.id + " - " + currentUser.username,
+                title: "문의가 도착했어요!",
+                // title: currentUser.id + " - " + currentUser.username,
                 description: text.value,
                 color: hexToDecimal("#ff0000")
             }
