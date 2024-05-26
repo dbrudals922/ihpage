@@ -38,7 +38,7 @@ export default defineConfig({
     //   server: {
     //     proxy: {
     //       '/api': {
-    //         target: 'https://localhost:80',
+    //         target: 'https://43.200.205.10:80',
     //         // rewrite: (path) => path.replace(/^\/api/, ''),
     //         ws: true,
     //         changeOrigin: true,
@@ -50,7 +50,7 @@ export default defineConfig({
     server: {
       proxy: {
         '/api': {
-          target: 'https://localhost:8080',
+          target: 'https://43.200.205.10:8080',
           changeOrigin: true,
           // rewrite: (path) => path.replace(/^\/api/, ''),
           secure: false,
