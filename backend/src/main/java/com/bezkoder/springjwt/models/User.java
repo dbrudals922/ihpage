@@ -83,8 +83,8 @@ public class User {
 	private String s_number;
 
 	@JsonIgnore
-	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name = "ih_user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	@ManyToMany()
+	@JoinTable(name = "ih_user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id") )
 	private Set<Role> roles = new HashSet<>();
 
 	@JsonIgnore

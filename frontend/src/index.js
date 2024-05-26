@@ -9,7 +9,7 @@ import Lunch from "./components/Lunch.vue";
 // lazy-loaded
 const Profile = () => import("./components/Profile.vue")
 const BoardAdmin = () => import("./components/BoardAdmin.vue")
-const BoardModerator = () => import("./components/BoardModerator.vue")
+const BoardTeacher = () => import("./components/BoardTeacher.vue")
 const BoardUser = () => import("./components/BoardUser.vue")
 
 const routes = [
@@ -39,10 +39,10 @@ const routes = [
     component: BoardAdmin,
   },
   {
-    path: "/mod",
-    name: "moderator",
+    path: "/teacher",
+    name: "teacher",
     // lazy-loaded
-    component: BoardModerator,
+    component: BoardTeacher,
   },
   {
     path: "/user",

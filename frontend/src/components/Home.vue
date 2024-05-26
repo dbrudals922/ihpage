@@ -2,10 +2,10 @@
   <full-page :options="this.options" id="fullpage" ref="fullpage">
 
     <div class="section">
-      <img src= "../assets/page1.jpg"/>
-      <div class="text-center">
+      <img src="../assets/page1.jpg" />
+      <!-- <div class="text-center">
         <h5>참고! 모바일 로그인 시 버튼이 돌아가며 아무 일도 일어나지 않을 때 우측 상단 x를 누르시면 사이트 이용 가능합니다.</h5>
-      </div>
+      </div> -->
     </div>
 
     <div class="section" v-if="currentUser">
@@ -144,7 +144,7 @@
       <h2>추후 "중고거래" 탭이 오픈될 예정입니다.</h2>
     </div>
 
-    <div class="section" > <!-- v-if="currentUser" -->
+    <div class="section"> <!-- v-if="currentUser" -->
       <Report />
     </div>
 
@@ -449,7 +449,7 @@ import '@vuepic/vue-datepicker/dist/main.css';
 import { mapActions, mapState } from "pinia";
 
 import moment from "moment";
-import $ from "jquery";
+// import $ from "jquery";
 import ClubList from "./ClubList.vue";
 import useClubStore from "../store/club";
 
@@ -504,7 +504,7 @@ export default {
       if (meChecked.value) {
         photoStore.setPhotos(photoStore.getAllPhotos.filter(photo => {
           const photoTime = moment(photo.photoPost.uploadedOn).format("YYYY-MM-DD HH:mm:ss.SSSSSS");
-          return dateFilter.value[0] <= photoTime && photoTime <= dateFilter.value[1] && photo.photoPost.user?.id == currentUser.id;
+          return dateFilter.value[0] <= photoTime && photoTime <= dateFilter.value[1] && photo.photoPost.user?.id == currentUser?.id;
         }))
       } else {
         photoStore.setPhotos(photoStore.getAllPhotos.filter(photo => {
@@ -779,6 +779,7 @@ export default {
           this.loading = false;
 
           alert("회원가입에 성공하셨습니다!")
+          this.message = "";
           history.go(0);
 
         },
@@ -795,13 +796,17 @@ export default {
       );
     },
     handleLogin(user) {
+      var vm = this;
       this.$store.dispatch("auth/login", user).then(
         () => {
           this.loading = true;
           // this.$router.push("/");
           // this.$router.go();
-          history.go(0);
-
+          $("#loginModal").modal('hide');
+          $("#loginModal").find('form').trigger('reset');
+          this.loading = false;
+          this.message = "";
+          // history.go(0);
         },
         (error) => {
           this.loading = false;

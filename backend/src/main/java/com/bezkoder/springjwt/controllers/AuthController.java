@@ -93,8 +93,10 @@ public class AuthController {
 				signUpRequest.getEmail(), encoder.encode(signUpRequest.getPassword()), signUpRequest.getS_grade(),
 				signUpRequest.getS_class(), signUpRequest.getS_number());
 
+
 		Integer role = signUpRequest.getRole();
 		Set<Role> roles = new HashSet<>();
+		
 		
 		if (role == null) {
 			Role userRole = roleRepository.findByName(ERole.ROLE_STUDENT)

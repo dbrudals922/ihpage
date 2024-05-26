@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_URL = 'http://43.200.205.10:8080/api/test/';
+const API_URL = 'http://localhost:8080/api/test/';
 
 class UserService {
   getPublicContent() {
@@ -18,6 +18,10 @@ class UserService {
 
   getAdminBoard() {
     return axios.get(API_URL + 'admin', { headers: authHeader() });
+  }
+
+  deleteUser(id) {
+    return axios.post(API_URL + 'deleteUser/' + id);
   }
 }
 

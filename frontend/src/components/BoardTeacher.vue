@@ -33,3 +33,8 @@ export default {
   },
 };
 </script>
+<style>
+body {
+  padding-top: 5rem;
+}
+</style>

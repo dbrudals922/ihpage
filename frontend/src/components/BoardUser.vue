@@ -34,7 +34,7 @@ export default {
 };
 </script>
 <style>
-div {
-  justify-content: center;
+body {
+  padding-top: 5rem;
 }
 </style>

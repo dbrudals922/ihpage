@@ -1,7 +1,7 @@
 <template>
     <div class="container report" style="height:fit-content;">
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">자유롭게 피드백을 남겨보세요~<br>오류 제보도 OK!</label>
+            <label for="exampleFormControlTextarea1"> 자유롭게 피드백을 남겨보세요~<br>오류 제보도 OK!</label>
             <textarea class="form-control" id="textarea" rows="10" v-model="text" style="resize: none;"></textarea>
         </div>
         <div class="d-flex justify-content-end">
