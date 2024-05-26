@@ -79,7 +79,7 @@
 
 <script>
 import 'vue-fullpage.js/dist/style.css'
-// import VueFullPage from 'vue-fullpage.js'
+import VueFullPage from 'vue-fullpage.js'
 import AuthService from './services/auth.service.js'
 import axios from 'axios';
 
@@ -93,7 +93,7 @@ import PhotoService from "./services/photo.service.js";
 export default {
   name: 'app',
   components: {
-    // VueFullPage,
+    VueFullPage,
     axios,
   },
   data() {

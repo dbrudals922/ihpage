@@ -24,7 +24,8 @@ export default defineConfig({
     // },
     outDir: "../backend/src/main/resources/static",
     // rollupOptions: {
-    //   external: ['vue'],
+    //   external: ["vue"],
+    // }
     //   // output: {
     //   //   globals: {
     //   //     vue: 'Vue',
@@ -37,7 +38,7 @@ export default defineConfig({
     //   server: {
     //     proxy: {
     //       '/api': {
-    //         target: 'https://43.200.205.10:80',
+    //         target: 'https://localhost:80',
     //         // rewrite: (path) => path.replace(/^\/api/, ''),
     //         ws: true,
     //         changeOrigin: true,
@@ -49,7 +50,7 @@ export default defineConfig({
     server: {
       proxy: {
         '/api': {
-          target: 'https://43.200.205.10:8080',
+          target: 'https://localhost:8080',
           changeOrigin: true,
           // rewrite: (path) => path.replace(/^\/api/, ''),
           secure: false,
@@ -58,5 +59,4 @@ export default defineConfig({
       }
     }
   },
-
 })

@@ -42,7 +42,6 @@ export default {
             alert("삭제가 완료되었습니다.\n다음에 또 만나요~");
             this.$store.dispatch('auth/logout');
             this.$router.push("/");
-
           },
           (error) => {
             console.log(error);
