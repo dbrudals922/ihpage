@@ -42,10 +42,4 @@ public class TestController {
 	public String adminAccess() {
 		return "Admin Board.";
 	}
-
-	@PostMapping("/deleteUser/{id}")
-	public void deleteUser(@PathVariable Long id) {
-		userRepository.deleteById(id);
-
-	}
 }

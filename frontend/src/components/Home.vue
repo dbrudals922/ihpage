@@ -118,8 +118,8 @@
     </div> -->
 
     <div class="section" v-if="currentUser">
-      <h2>추후 "동아리" 탭이 오픈될 예정입니다.</h2>
-      <!-- <div class="container" v-if="!isUploading">
+      <!-- <h2>추후 "동아리" 탭이 오픈될 예정입니다.</h2> -->
+      <div class="container" v-if="!isUploading">
 
         <button class="btn btn-primary" v-on:click="chooseClubFiles()">ㅇㅅㅇ</button>
 
@@ -135,7 +135,7 @@
       </div>
       <Suspense>
         <ClubList @toggleUpload="toggleUpload" />
-      </Suspense> -->
+      </Suspense>
     </div>
 
 

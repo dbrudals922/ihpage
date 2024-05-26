@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/auth/';
-const API_URL3 = 'http://localhost:8080/api/info/';
+const API_URL = 'http://43.200.205.10:8080/api/auth/';
+const API_URL3 = 'http://43.200.205.10:8080/api/info/';
 
 class AuthService {
   login(user) {
@@ -35,6 +35,10 @@ class AuthService {
       s_number: user.s_number,
       role: user.role,
     });
+  }
+
+  deleteUser(id) {
+    return axios.post(API_URL + 'deleteUser/' + id);
   }
 
   please() {

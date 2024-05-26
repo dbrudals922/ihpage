@@ -14,6 +14,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -93,11 +94,9 @@ public class AuthController {
 				signUpRequest.getEmail(), encoder.encode(signUpRequest.getPassword()), signUpRequest.getS_grade(),
 				signUpRequest.getS_class(), signUpRequest.getS_number());
 
-
 		Integer role = signUpRequest.getRole();
 		Set<Role> roles = new HashSet<>();
-		
-		
+
 		if (role == null) {
 			Role userRole = roleRepository.findByName(ERole.ROLE_STUDENT)
 					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
@@ -129,4 +128,12 @@ public class AuthController {
 		return ResponseEntity.ok(new MessageResponse("회원가입에 성공하였습니다!"));
 	}
 
+	@PostMapping("/deleteUser/{id}")
+	public String deleteUser(@PathVariable Long id) {
+		userRepository.deleteById(id);
+		
+		return "회원 탈퇴가 완료되었습니다.";
+	}
+
+	
 }
